@@ -167,6 +167,9 @@ function gatherUV_Data(aK){
        JSON.stringify(response);
        
        $("#uVLevel").text("UV Index: " + response.value);
+
+       $(".dailyDetail").remove();
+
        // Day 1
        $("#day_1").append(`<p class="dailyDetail"> Temp: ${Math.round(response.daily[0].temp.day)}°F</p>`);
        $("#day_1").append(`<p class="dailyDetail"> Humidity: ${response.daily[0].humidity} %</p>`);
@@ -203,22 +206,6 @@ function gatherUV_Data(aK){
 })       
 }
 
-function grabMap(authCode, long, lat){
-    let mapPoint = `https://tile.openweathermap.org/map/temp_new/3/1/1.png?appid=${authCode}`
-    $.ajax({
-        url: mapPoint,
-        method: "GET",
-        error: function(XMLHttpRequest, textStatus, errorThrown){
-            console.log('Sorry, but this search generated an error.  Please try again! ' +
-                    '\n Details: Status =' + XMLHttpRequest.status + ', Status Text: ' + XMLHttpRequest.statusText);
-        },
-    }).then(function(response){
-       //JSON.stringify(response);
-       
-      // $("#weathermap").attr("src", response);
-    })  
-
-}
 
 //------------------------------
 /*
@@ -282,7 +269,7 @@ function import_localStorage_cities(){
         }
 
         $("li").each( function(){
-           if( $(this).text() === cityName ){
+           if( $(this).html() === cityName ){
               return;
              }
           })
@@ -317,7 +304,17 @@ function import_localStorage_cities(){
                 var objString = JSON.stringify(event_array);
                  localStorage.setItem("mycityList", objString);       
                         } 
+
+$("ul").on("click", function(event) {
+    // Don't refresh window.
+    event.preventDefault();
+    var searchItem = event.target;
+    var searchCriteria = $(searchItem).text();
+    verifyCity(searchCriteria);
+})
      
+
+
                            
                  
      
