@@ -1,4 +1,5 @@
 #WEATHER DASHBOARD APPLICATION
+[LINK TO SITE](https://bcefarmer.github.io/weather-dashboard/
 
 #PURPOSE:
 The Weather-Dashboard app allows a user to search weather conditions by city, and to have these past searches save to local storage and appear in a list underneath the search bar.
