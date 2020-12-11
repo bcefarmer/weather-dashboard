@@ -1,0 +1,151 @@
+
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+header{
+  line-height: 1;
+}
+
+.lead{
+  font-size: 18px;
+  padding-bottom: 20px;
+
+}
+
+@media only screen and (min-width:501px){
+  aside {
+    height: 100%;
+    width: auto;
+    font-family: 'Source Code Pro', monospace;
+  }
+}
+
+@media only screen and (max-width:500px){
+  aside {
+    height: 40px;
+    width: 100%;
+    font-family: 'Source Code Pro', monospace;
+  }
+}
+
+@media only screen and (min-width:501px){
+  #btnPair {
+    height: 100%;
+    width: auto;
+    font-family: 'Source Code Pro', monospace;
+  }
+    
+}
+
+@media only screen and (max-width:500px){
+  #btnPair {
+    
+    width: auto;
+    height: 40px;
+    font-family: 'Source Code Pro', monospace;
+  }
+}
+
+.inputGroup{
+  width: 100%;
+}
+
+
+input{
+  height: 75%;
+  width: 55%;
+}
+
+
+
+ @media only screen and (min-width:501px){
+   .dayForecast{
+     width: 20%;
+     padding: 0;
+     margin-left: 0;
+     margin-right: 0;
+   }
+ }
+
+ @media only screen and (max-width:500px){
+  .dayForecast{
+    width: 100%;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+#upperContent{
+  width: 100%;
+}
+
+#weatherIcon{
+  width:25%;
+  height: auto;
+}
+#localConditions{
+  width: 100%;
+ } 
+
+ @media only screen and (min-width:501px){
+  #fiveDayWrapper{
+  
+    width: 100%
+  }
+}
+
+ @media only screen and (min-width:500px){
+  .dayForecast{
+    width: 20%;
+    padding: 0;
+    
+  }
+}
+
+@media only screen and (max-width:501px){
+  .dayForecast{
+    
+    padding: 0;
+    width: 100%;
+    
+  }
+}
+
+.card{
+  background-color: #597964;
+  width:100%;
+  color: white;
+}
+
+@media only screen and (min-width:501px){
+  .list-group {
+    margin-top: 2%;
+    width: 100%;
+    height: 100%;
+    font-family: 'Source Code Pro', monospace;
+  }
+}
+
+@media only screen and (max-width:500px){
+  .list-group {
+    display: none;
+    
+  }
+}
+
+.wrapCurrentConditions{
+  width: 100%;
+  text-align: center;
+  }
+
+ ul{
+  background-color:#596e79;
+  text-align: center;
+  color: white;
+}
+    
+li{
+  border: 1px solid white;
+}  
