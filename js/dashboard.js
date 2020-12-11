@@ -166,7 +166,7 @@ function gatherUV_Data(aK){
     }).then(function(response){
        JSON.stringify(response);
        
-       $("#uVLevel").text("UV Index: " + response.value);
+       $("#uVLevel").text("UV Index: " + response.daily[0].uvi);
 
        $(".dailyDetail").remove();
 
