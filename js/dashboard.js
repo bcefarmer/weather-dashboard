@@ -264,15 +264,20 @@ function import_localStorage_cities(){
           
 
       function checkCityList(cityName){
+        var escapeSet = "";  
         if(cityName === "Kinshasa"){
             return;
         }
 
         $("li").each( function(){
-           if( $(this).html() === cityName ){
-              return;
+           if( $(this).text() === cityName ){
+              escapeSet = 1;
              }
           })
+       
+      if(escapeSet === 1){
+       return;
+      }    
       var addedItem = document.createElement("li");
       $(addedItem).text(cityName);
       $(".list-group").append(addedItem);
